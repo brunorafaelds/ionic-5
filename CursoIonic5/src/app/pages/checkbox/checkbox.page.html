@@ -1,0 +1,73 @@
+<ion-header>
+<ion-toolbar color="">
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons> 
+  <ion-title>Action Sheet</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Default Checkbox -->
+  <ion-item>
+    <ion-label>Default Checkbox</ion-label>
+    <ion-checkbox></ion-checkbox> <br/>
+  </ion-item>
+
+  <!-- Disabled Checkbox -->
+  <ion-item>
+    <ion-label>Disabled Checkbox</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox> <br/>
+  </ion-item>
+  
+  <!-- Checked Checkbox -->
+  <ion-item>
+    <ion-label>Checked Checkbox </ion-label>
+    <ion-checkbox checked="true"></ion-checkbox> <br/>
+  </ion-item>
+  
+  <!-- Checkbox Colors -->
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Checkbox Colors</ion-label>
+    </ion-item-divider>
+    
+    <ion-item>
+      <ion-label>primary</ion-label>
+               <ion-checkbox color="primary"></ion-checkbox> <br/>
+    </ion-item>
+    <ion-item>
+      <ion-label>secondary</ion-label>
+             <ion-checkbox color="secondary"></ion-checkbox> <br/>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>danger</ion-label>
+                <ion-checkbox color="danger"></ion-checkbox> <br/>
+    </ion-item>
+    <ion-item>
+      <ion-label>light</ion-label>
+                 <ion-checkbox color="light"></ion-checkbox> <br/>
+    </ion-item>
+    <ion-item>
+      <ion-label>dark</ion-label>
+                  <ion-checkbox color="dark"></ion-checkbox> <br/>
+    </ion-item>
+    <ion-item>
+      <ion-label>success</ion-label>
+                  <ion-checkbox color="success"></ion-checkbox> <br/>
+    </ion-item>
+  </ion-item-group>
+
+
+  <!-- Checkboxes in a List -->
+  <h3>Meses</h3>
+  <ion-list>
+    <ion-item *ngFor="let mes of meses">
+      <ion-label>{{mes.nomeDoMes}}</ion-label>
+      <ion-checkbox slot="end" [checked]="mes.marcado" [(ngModel)]="mes.marcado" color="warning"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="exibir()">Exibir meses marcados</ion-button>
+</ion-content>
