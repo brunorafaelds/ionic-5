@@ -46,9 +46,15 @@ export class AppComponent implements OnInit {
       title: 'Card',
       url: 'card',
       icon: 'construct'
-    },{
+    },
+    {
       title:'Checkbox',
       url:'checkbox',
+      icon:'construct'
+    },
+    {
+      title:'Chip',
+      url:'chip',
       icon:'construct'
     }
   ];
